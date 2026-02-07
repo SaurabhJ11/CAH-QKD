@@ -1,0 +1,10 @@
+{
+  "name": "Rigetti Aspen-M-3",
+  "type": "superconducting",
+  "single_qubit_fidelity": 0.998,
+  "two_qubit_fidelity": 0.952,
+  "T1": 50,
+  "T2": 30,
+  "depolarizing_1q": 0.002,
+  "depolarizing_2q": 0.048
+}

@@ -1,0 +1,10 @@
+{
+  "name": "IonQ Harmony",
+  "type": "trapped_ion",
+  "single_qubit_fidelity": 0.999,
+  "two_qubit_fidelity": 0.975,
+  "T1": 8000,
+  "T2": 800,
+  "depolarizing_1q": 0.001,
+  "depolarizing_2q": 0.025
+}

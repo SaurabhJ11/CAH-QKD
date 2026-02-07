@@ -1,0 +1,10 @@
+{
+  "name": "IonQ Aria",
+  "type": "trapped_ion",
+  "single_qubit_fidelity": 0.9995,
+  "two_qubit_fidelity": 0.987,
+  "T1": 10000,
+  "T2": 1000,
+  "depolarizing_1q": 0.0005,
+  "depolarizing_2q": 0.013
+}

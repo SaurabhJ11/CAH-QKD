@@ -1,0 +1,10 @@
+{
+  "name": "OQC Lucy",
+  "type": "superconducting",
+  "single_qubit_fidelity": 0.997,
+  "two_qubit_fidelity": 0.945,
+  "T1": 45,
+  "T2": 25,
+  "depolarizing_1q": 0.003,
+  "depolarizing_2q": 0.055
+}
