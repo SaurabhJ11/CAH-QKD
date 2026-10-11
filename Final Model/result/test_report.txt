@@ -1,0 +1,83 @@
+============================================================
+QKD MODEL TEST REPORT
+============================================================
+Timestamp: 2026-04-12T10:52:31.444234
+
+
+Model Loading
+----------------------------------------
+  [PASS] Load model
+         Model loaded successfully
+  [PASS] Load label encoder
+         Protocols: ['AB-QKD', 'B92', 'BB84', 'BBM92', 'DS6-QKD', 'Decoy-BB84', 'E91', 'EEPM-QKD', 'SARG04', 'Six-State']
+  [PASS] Load platform encoder
+         Platforms: ['ionq_aria', 'ionq_harmony', 'oqc_lucy', 'rigetti_aspen_m3']
+  [PASS] Load scaler
+         Scaler loaded successfully
+  [PASS] Load data stats
+         Total samples: 40000
+
+Protocol Predictions
+----------------------------------------
+  [PASS] Protocol AB-QKD
+         Predicted key rate: 0.019719
+  [PASS] Protocol B92
+         Predicted key rate: 0.193024
+  [PASS] Protocol BB84
+         Predicted key rate: 0.395697
+  [PASS] Protocol BBM92
+         Predicted key rate: 0.394946
+  [PASS] Protocol DS6-QKD
+         Predicted key rate: 0.025816
+  [PASS] Protocol Decoy-BB84
+         Predicted key rate: 0.441585
+  [PASS] Protocol E91
+         Predicted key rate: 0.186471
+  [PASS] Protocol EEPM-QKD
+         Predicted key rate: 0.397999
+  [PASS] Protocol SARG04
+         Predicted key rate: 0.372096
+  [PASS] Protocol Six-State
+         Predicted key rate: 0.023436
+
+Distance Variations
+----------------------------------------
+  [PASS] Distance trend
+         Key rate decreases with distance (physically correct)
+
+Noise Variations
+----------------------------------------
+  [FAIL] Noise trend
+         Unexpected trend
+
+Edge Cases
+----------------------------------------
+  [PASS] Minimum distance
+         Prediction: 0.446535
+  [PASS] Maximum distance
+         Prediction: 0.390449
+  [PASS] Low noise
+         Prediction: 0.395628
+  [PASS] High noise
+         Prediction: 0.396033
+  [PASS] BBM92 mid-range
+         Prediction: 0.390290
+  [PASS] Decoy at short distance
+         Prediction: 0.458757
+
+Data Comparison
+----------------------------------------
+  [PASS] MSE test
+         MSE: 0.001204
+  [PASS] R² test
+         R²: 0.9582
+  [PASS] Accuracy test
+         Within 10%: 71.4%
+
+============================================================
+SUMMARY
+============================================================
+Total Tests: 26
+Passed: 25
+Failed: 1
+Pass Rate: 96.2%

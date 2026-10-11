@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-04-11T11:01:58.054922",
+  "sections": {
+    "Model Loading": {
+      "tests": [
+        {
+          "name": "Load model",
+          "passed": true,
+          "details": "Model loaded successfully"
+        },
+        {
+          "name": "Load label encoder",
+          "passed": true,
+          "details": "Protocols: ['AB-QKD', 'B92', 'BB84', 'BBM92', 'DS6-QKD', 'Decoy-BB84', 'E91', 'EEPM-QKD', 'SARG04', 'Six-State']"
+        },
+        {
+          "name": "Load platform encoder",
+          "passed": true,
+          "details": "Platforms: ['ionq_aria', 'ionq_harmony', 'oqc_lucy', 'rigetti_aspen_m3']"
+        },
+        {
+          "name": "Load scaler",
+          "passed": true,
+          "details": "Scaler loaded successfully"
+        },
+        {
+          "name": "Load data stats",
+          "passed": true,
+          "details": "Total samples: 40000"
+        }
+      ],
+      "summary": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    },
+    "Protocol Predictions": {
+      "tests": [
+        {
+          "name": "Protocol AB-QKD",
+          "passed": true,
+          "details": "Predicted key rate: 0.021581"
+        },
+        {
+          "name": "Protocol B92",
+          "passed": true,
+          "details": "Predicted key rate: 0.200161"
+        },
+        {
+          "name": "Protocol BB84",
+          "passed": true,
+          "details": "Predicted key rate: 0.396705"
+        },
+        {
+          "name": "Protocol BBM92",
+          "passed": true,
+          "details": "Predicted key rate: 0.393886"
+        },
+        {
+          "name": "Protocol DS6-QKD",
+          "passed": true,
+          "details": "Predicted key rate: 0.030223"
+        },
+        {
+          "name": "Protocol Decoy-BB84",
+          "passed": true,
+          "details": "Predicted key rate: 0.441717"
+        },
+        {
+          "name": "Protocol E91",
+          "passed": true,
+          "details": "Predicted key rate: 0.178388"
+        },
+        {
+          "name": "Protocol EEPM-QKD",
+          "passed": true,
+          "details": "Predicted key rate: 0.413088"
+        },
+        {
+          "name": "Protocol SARG04",
+          "passed": true,
+          "details": "Predicted key rate: 0.365692"
+        },
+        {
+          "name": "Protocol Six-State",
+          "passed": true,
+          "details": "Predicted key rate: 0.023492"
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    },
+    "Distance Variations": {
+      "tests": [
+        {
+          "name": "Distance trend",
+          "passed": true,
+          "details": "Key rate decreases with distance (physically correct)"
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    },
+    "Noise Variations": {
+      "tests": [
+        {
+          "name": "Noise trend",
+          "passed": true,
+          "details": "Key rate decreases with noise (physically correct)"
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    },
+    "Edge Cases": {
+      "tests": [
+        {
+          "name": "Minimum distance",
+          "passed": true,
+          "details": "Prediction: 0.447330"
+        },
+        {
+          "name": "Maximum distance",
+          "passed": true,
+          "details": "Prediction: 0.392588"
+        },
+        {
+          "name": "Low noise",
+          "passed": true,
+          "details": "Prediction: 0.396772"
+        },
+        {
+          "name": "High noise",
+          "passed": true,
+          "details": "Prediction: 0.396508"
+        },
+        {
+          "name": "BBM92 mid-range",
+          "passed": true,
+          "details": "Prediction: 0.389308"
+        },
+        {
+          "name": "Decoy at short distance",
+          "passed": true,
+          "details": "Prediction: 0.457354"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    },
+    "Data Comparison": {
+      "tests": [
+        {
+          "name": "MSE test",
+          "passed": true,
+          "details": "MSE: 0.001027"
+        },
+        {
+          "name": "R\u00b2 test",
+          "passed": true,
+          "details": "R\u00b2: 0.9644"
+        },
+        {
+          "name": "Accuracy test",
+          "passed": true,
+          "details": "Within 10%: 83.1%"
+        }
+      ],
+      "summary": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "pass_rate": 100.0
+      }
+    }
+  },
+  "overall": {
+    "total_tests": 26,
+    "passed": 26,
+    "failed": 0,
+    "pass_rate": 100.0
+  }
+}

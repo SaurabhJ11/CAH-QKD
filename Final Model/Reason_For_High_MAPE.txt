@@ -1,0 +1,5 @@
+ Your training_results.json shows strong generalization signals: R² is high on test (0.9317 for secure key rate, 0.9968 for transmission),
+  and final_val_loss (0.00165) is lower than final_loss (0.00243), which is opposite of typical overfitting behavior.
+  The MAPE is inflated because train_model.py computes abs((y_true - y_pred)/y_true) and only excludes exact zeros. Your targets have many
+  tiny values (transmission min 1e-5, and many near zero), so even tiny absolute errors become huge percentages, which blows up MAPE
+  (especially transmission MAPE 1883%) and therefore the averaged overall MAPE.

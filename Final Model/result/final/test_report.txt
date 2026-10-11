@@ -1,0 +1,83 @@
+============================================================
+QKD MODEL TEST REPORT
+============================================================
+Timestamp: 2026-04-11T11:01:58.054922
+
+
+Model Loading
+----------------------------------------
+  [PASS] Load model
+         Model loaded successfully
+  [PASS] Load label encoder
+         Protocols: ['AB-QKD', 'B92', 'BB84', 'BBM92', 'DS6-QKD', 'Decoy-BB84', 'E91', 'EEPM-QKD', 'SARG04', 'Six-State']
+  [PASS] Load platform encoder
+         Platforms: ['ionq_aria', 'ionq_harmony', 'oqc_lucy', 'rigetti_aspen_m3']
+  [PASS] Load scaler
+         Scaler loaded successfully
+  [PASS] Load data stats
+         Total samples: 40000
+
+Protocol Predictions
+----------------------------------------
+  [PASS] Protocol AB-QKD
+         Predicted key rate: 0.021581
+  [PASS] Protocol B92
+         Predicted key rate: 0.200161
+  [PASS] Protocol BB84
+         Predicted key rate: 0.396705
+  [PASS] Protocol BBM92
+         Predicted key rate: 0.393886
+  [PASS] Protocol DS6-QKD
+         Predicted key rate: 0.030223
+  [PASS] Protocol Decoy-BB84
+         Predicted key rate: 0.441717
+  [PASS] Protocol E91
+         Predicted key rate: 0.178388
+  [PASS] Protocol EEPM-QKD
+         Predicted key rate: 0.413088
+  [PASS] Protocol SARG04
+         Predicted key rate: 0.365692
+  [PASS] Protocol Six-State
+         Predicted key rate: 0.023492
+
+Distance Variations
+----------------------------------------
+  [PASS] Distance trend
+         Key rate decreases with distance (physically correct)
+
+Noise Variations
+----------------------------------------
+  [PASS] Noise trend
+         Key rate decreases with noise (physically correct)
+
+Edge Cases
+----------------------------------------
+  [PASS] Minimum distance
+         Prediction: 0.447330
+  [PASS] Maximum distance
+         Prediction: 0.392588
+  [PASS] Low noise
+         Prediction: 0.396772
+  [PASS] High noise
+         Prediction: 0.396508
+  [PASS] BBM92 mid-range
+         Prediction: 0.389308
+  [PASS] Decoy at short distance
+         Prediction: 0.457354
+
+Data Comparison
+----------------------------------------
+  [PASS] MSE test
+         MSE: 0.001027
+  [PASS] R² test
+         R²: 0.9644
+  [PASS] Accuracy test
+         Within 10%: 83.1%
+
+============================================================
+SUMMARY
+============================================================
+Total Tests: 26
+Passed: 26
+Failed: 0
+Pass Rate: 100.0%

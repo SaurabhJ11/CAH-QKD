@@ -1,0 +1,15 @@
+
+# Local Python virtual environments
+Final Website/qkd-website/backend/venv_mac/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+
+# macOS metadata
+.DS_Store
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example

@@ -1,0 +1,117 @@
+You are GPT-5, acting as a senior full-stack engineer and product designer.
+
+Build a complete, interactive MVP website for this project:
+"QKD Secure Key Rate Prediction — MVP" (Quantum Key Distribution protocol recommendation system).
+
+Goal:
+Create a polished website where users can explore the project and run protocol recommendations by entering conditions (distance, platform, noise), then view ranked protocol outputs with rich visual feedback.
+
+Tech constraints:
+- Use React + Vite + TypeScript.
+- Use Tailwind CSS (or CSS variables + modern CSS if preferred).
+- Use responsive design for desktop + mobile.
+- Keep architecture clean and production-like, but MVP scope.
+
+Brand palette (must be used exactly):
+- Primary: #8ecff2
+- On Primary: #003548
+- Secondary: #b5c9d7
+- On Secondary: #1f333d
+- Tertiary: #c9c2ea
+- On Tertiary: #312c4c
+- Error: #ffb4ab
+- On Error: #690005
+- Primary Container: #004d67
+- On Primary Container: #c1e8ff
+- Secondary Container: #364954
+- On Secondary Container: #d1e6f3
+- Tertiary Container: #474364
+- On Tertiary Container: #e5deff
+- Surface Dim: #0f1417
+- Surface: #0f1417
+- Surface Bright: #353a3d
+
+Design requirements:
+- Do NOT make a generic template look.
+- Use expressive typography (avoid default system feel).
+- Define CSS variables for the palette.
+- Use subtle gradients/shapes in background for visual atmosphere.
+- Include meaningful motion (page intro, card reveals, transitions for results).
+- Strong contrast and accessibility for text/readability.
+
+Core pages/sections:
+1) Hero section
+- Project title, one-line value proposition.
+- CTA: "Try Live Recommendation" and "View Model Details".
+
+2) Interactive Recommendation Panel (main feature)
+- Inputs:
+  - Distance (km) slider + number input, range 5–250.
+  - Platform selector with labels and internal values:
+    - IonQ Aria (ionq_aria)
+    - IonQ Harmony (ionq_harmony)
+    - Rigetti Aspen-M3 (rigetti_aspen_m3)
+    - OQC Lucy (oqc_lucy)
+  - Noise factor slider/input range 1.0–2.5.
+- Validation with friendly inline errors.
+- "Recommend Top 3" button.
+- Results area:
+  - Top 3 protocols ranked with secure key rate values.
+  - Progress bars or radial indicators for scores.
+  - Highlight winner card visually.
+  - Animate result entry.
+
+3) Protocol Explorer
+- Show all 10 protocols in cards/table.
+- Sort by predicted secure key rate for current input.
+- Search/filter protocols by name.
+- Optional sparkline or mini visual indicator per protocol.
+
+4) Model + Data Overview
+- Summary cards:
+  - Algorithm (XGBoost)
+  - Dataset size (40,000)
+  - R2, MAE, RMSE
+  - Features (21)
+- Small chart/visual blocks for model metrics.
+
+5) Hardware Specs Comparison
+- Compare all 4 platforms (fidelity, T1, T2) in an interactive table.
+- Add hover states/tooltips.
+
+6) Footer
+- Repo/project note, MVP status, contact placeholder.
+
+Interaction behavior:
+- Build frontend to call an API endpoint (mock if backend unavailable):
+  - POST /api/recommend
+  - Body: { distance_km, platform, noise_factor, top_n }
+  - Returns ranked protocols with secure_key_rate.
+- If no backend exists, include a robust mock service with realistic sample outputs from README ranges.
+- Add loading, empty, and error states.
+- Add reset-to-default button.
+
+Data to embed/include:
+- Protocol list:
+  AB-QKD, B92, BB84, BBM92, DS6-QKD, Decoy-BB84, E91, EEPM-QKD, SARG04, Six-State
+- Platform details from README.
+
+Quality requirements:
+- Strong componentization and folder structure.
+- Type-safe models/interfaces.
+- Reusable UI components (buttons, cards, input controls, badges).
+- Clean state management (React hooks or Zustand).
+- Accessible labels, keyboard support, aria where needed.
+
+Deliverables required in your response:
+1) Full project folder structure.
+2) All source code files with complete content.
+3) Setup and run commands.
+4) Any environment variable examples.
+5) Short explanation of interaction flows.
+6) Optional next improvements.
+
+Important:
+- Keep it MVP but highly interactive and visually intentional.
+- Maintain consistency with the exact color coding listed above.
+- Ensure the site runs without backend by default using mock mode, but is easy to switch to real API mode.

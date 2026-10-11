@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+:root {
+  /* Primary */
+  --primary: #8ecff2;
+  --on-primary: #003548;
+  --primary-container: #004d67;
+  --on-primary-container: #c1e8ff;
+
+  /* Secondary */
+  --secondary: #b5c9d7;
+  --on-secondary: #1f333d;
+  --secondary-container: #364954;
+  --on-secondary-container: #d1e6f3;
+
+  /* Tertiary */
+  --tertiary: #c9c2ea;
+  --on-tertiary: #312c4c;
+  --tertiary-container: #474364;
+  --on-tertiary-container: #e5deff;
+
+  /* Error */
+  --error: #ffb4ab;
+  --on-error: #690005;
+
+  /* Surface */
+  --surface-dim: #0f1417;
+  --surface: #0f1417;
+  --surface-bright: #353a3d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-secondary font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold text-primary;
+  }
+
+  ::selection {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-tertiary to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .glass-card {
+    @apply bg-surface-bright/30 backdrop-blur-md border border-secondary-container/30 rounded-2xl;
+  }
+
+  .input-base {
+    @apply bg-surface-bright border border-secondary-container/50 rounded-lg px-4 py-2.5
+           text-secondary placeholder:text-secondary/50
+           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary
+           transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-on font-semibold px-6 py-3 rounded-lg
+           hover:bg-primary/90 active:scale-[0.98]
+           transition-all duration-200 shadow-lg shadow-primary/20;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-container text-secondary-on-container font-medium px-6 py-3 rounded-lg
+           hover:bg-secondary-container/80 active:scale-[0.98]
+           transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-stagger > * {
+    animation: slideUp 0.5s ease-out backwards;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 100ms; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 200ms; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 300ms; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 400ms; }
+}

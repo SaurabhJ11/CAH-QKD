@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-04-11T18:05:20.994302",
+  "hyperparameters": {
+    "epochs": 200,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "validation_split": 0.2,
+    "test_size": 0.2
+  },
+  "data_stats": {
+    "protocols": [
+      "AB-QKD",
+      "B92",
+      "BB84",
+      "BBM92",
+      "DS6-QKD",
+      "Decoy-BB84",
+      "E91",
+      "EEPM-QKD",
+      "SARG04",
+      "Six-State"
+    ],
+    "platforms": [
+      "ionq_aria",
+      "ionq_harmony",
+      "oqc_lucy",
+      "rigetti_aspen_m3"
+    ],
+    "distance_range": [
+      5.0,
+      250.0
+    ],
+    "noise_range": [
+      1.0,
+      2.5
+    ],
+    "key_rate_range": [
+      0.0,
+      0.5713173169443381
+    ],
+    "transmission_range": [
+      1e-05,
+      0.7943282347242815
+    ],
+    "total_samples": 40000,
+    "input_features": [
+      "protocol",
+      "platform",
+      "distance_km",
+      "noise_factor"
+    ],
+    "output_features": [
+      "secure_key_rate",
+      "transmission"
+    ]
+  },
+  "test_metrics": {
+    "secure_key_rate": {
+      "mse": 0.0021618805004799927,
+      "rmse": 0.046496026717129206,
+      "mae": 0.02890576849621756,
+      "r2": 0.9283032469661056,
+      "mape": 34.494939057296165,
+      "accuracy_10pct": 55.074999999999996
+    },
+    "transmission": {
+      "mse": 0.0001815845676430386,
+      "rmse": 0.013475331819403876,
+      "mae": 0.008713401197686014,
+      "r2": 0.9967456549635983,
+      "mape": 1171.9861892347374,
+      "accuracy_10pct": 36.075
+    },
+    "overall": {
+      "mse": 0.0011717325340615157,
+      "rmse": 0.029985679268266542,
+      "mae": 0.018809584846951787,
+      "r2": 0.962524450964852,
+      "mape": 603.2405641460168,
+      "accuracy_10pct": 45.575
+    }
+  },
+  "training_history": {
+    "final_loss": 0.0029193612281233072,
+    "final_val_loss": 0.0017670700326561928
+  }
+}
